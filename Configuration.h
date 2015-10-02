@@ -76,7 +76,7 @@
 #define DELTA_SMOOTH_ROD_OFFSET 40.43 // mm
 
 // Horizontal offset of the universal joints on the end effector.
-#define DELTA_EFFECTOR_OFFSET 33.0 // mm
+#define DELTA_EFFECTOR_OFFSET 42.34 // mm
 
 // Horizontal offset of the universal joints on the carriages.
 #define DELTA_CARRIAGE_OFFSET 18.0 // mm
