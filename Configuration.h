@@ -73,7 +73,7 @@
 #define DELTA_DIAGONAL_ROD 320.3 // mm
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 175.0 // mm
+#define DELTA_SMOOTH_ROD_OFFSET 40.43 // mm
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 33.0 // mm
