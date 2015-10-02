@@ -79,7 +79,7 @@
 #define DELTA_EFFECTOR_OFFSET 42.34 // mm
 
 // Horizontal offset of the universal joints on the carriages.
-#define DELTA_CARRIAGE_OFFSET 18.0 // mm
+#define DELTA_CARRIAGE_OFFSET 58.0 // mm
 
 // Effective horizontal distance bridged by diagonal push rods.
 #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
