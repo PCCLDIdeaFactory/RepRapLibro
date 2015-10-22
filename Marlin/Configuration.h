@@ -73,17 +73,19 @@
 #define DELTA_DIAGONAL_ROD 320.3 // mm
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 40.43 // mm
+//#define DELTA_SMOOTH_ROD_OFFSET 40.43 // mm
+#define DELTA_SMOOTH_ROD_OFFSET 193.0 // mm
 
 // Horizontal offset of the universal joints on the end effector.
-#define DELTA_EFFECTOR_OFFSET 42.34 // mm
+//#define DELTA_EFFECTOR_OFFSET 42.34 // mm
+#define DELTA_EFFECTOR_OFFSET 24.5 //mm
 
 // Horizontal offset of the universal joints on the carriages.
 #define DELTA_CARRIAGE_OFFSET 58.0 // mm
 
 // Effective horizontal distance bridged by diagonal push rods.
 #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
-//#define DELTA_RADIUS -56.0
+
 //===========================================================================
 //=============================Thermal Settings  ============================
 //===========================================================================
