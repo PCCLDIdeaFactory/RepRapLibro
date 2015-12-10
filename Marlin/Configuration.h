@@ -78,7 +78,7 @@
 
 // Horizontal offset of the universal joints on the end effector.
 //#define DELTA_EFFECTOR_OFFSET 42.34 // mm
-#define DELTA_EFFECTOR_OFFSET 24.9 //mm
+#define DELTA_EFFECTOR_OFFSET 24.5 //mm
 
 // Horizontal offset of the universal joints on the carriages.
 #define DELTA_CARRIAGE_OFFSET 58.0 // mm
