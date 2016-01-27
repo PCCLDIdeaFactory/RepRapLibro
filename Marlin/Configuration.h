@@ -327,17 +327,21 @@ Here are some standard links for getting your machine calibrated:
   // NOTE NB all values for DELTA_* values MUST be floating point, so always have a decimal point in them
 
   // Center-to-center distance of the holes in the diagonal push rods.
-  #define DELTA_DIAGONAL_ROD 320.3 // mm
-
+  //#define DELTA_DIAGONAL_ROD 320.3 // mm
+  #define DELTA_DIAGONAL_ROD 322.0 // mm - new measure as of 2015-12-30
+  
   // Horizontal offset from middle of printer to smooth rod center.
-  #define DELTA_SMOOTH_ROD_OFFSET 193.0 // mm
-
+  //#define DELTA_SMOOTH_ROD_OFFSET 193.0 // mm
+  #define DELTA_SMOOTH_ROD_OFFSET 181.5 // mm - new measure as of 2015-12-30
+  
   // Horizontal offset of the universal joints on the end effector.
-  #define DELTA_EFFECTOR_OFFSET 24.9 // mm
-
+  //#define DELTA_EFFECTOR_OFFSET 24.9 // mm
+  #define DELTA_EFFECTOR_OFFSET 29.5 // mm - new measure as of 2015-12-30
+  
   // Horizontal offset of the universal joints on the carriages.
-  #define DELTA_CARRIAGE_OFFSET 58.0 // mm
-
+  //#define DELTA_CARRIAGE_OFFSET 58.0 // mm
+  #define DELTA_CARRIAGE_OFFSET 33.0 // mm - new measure as of 2015-12-30
+  
   // Horizontal distance bridged by diagonal push rods when effector is centered.
   #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
 
@@ -478,7 +482,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 // @section bedlevel
 
 
-#define AUTO_BED_LEVELING_FEATURE // Delete the comment to enable (remove // at the start of the line)
+//#define AUTO_BED_LEVELING_FEATURE // Delete the comment to enable (remove // at the start of the line)
 #define DEBUG_LEVELING_FEATURE
 //#define Z_MIN_PROBE_REPEATABILITY_TEST  // If not commented out, Z-Probe Repeatability test will be included if Auto Bed Leveling is Enabled.
 
@@ -514,7 +518,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
     // Compensate by interpolating between the nearest four Z probe values for each point.
     // Useful for deltas where the print surface may appear like a bowl or dome shape.
     // Works best with ACCURATE_BED_LEVELING_POINTS 5 or higher.
-    #define AUTO_BED_LEVELING_GRID_POINTS 15
+    #define AUTO_BED_LEVELING_GRID_POINTS 7
 
   #else  // !AUTO_BED_LEVELING_GRID
 
@@ -533,7 +537,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
   // X and Y offsets must be integers.
   #define X_PROBE_OFFSET_FROM_EXTRUDER 0     // Z probe to nozzle X offset: -left  +right
   #define Y_PROBE_OFFSET_FROM_EXTRUDER -10   // Z probe to nozzle Y offset: -front +behind
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER -3.5  // Z probe to nozzle Z offset: -below (always!)
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER -1  // Z probe to nozzle Z offset: -below (always!)
 
   #define Z_RAISE_BEFORE_HOMING 4       // (in mm) Raise Z axis before homing (G28) for Z probe clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case.
@@ -694,7 +698,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 #if ENABLED(MANUAL_HOME_POSITIONS)
   #define MANUAL_X_HOME_POS 0
   #define MANUAL_Y_HOME_POS 0
-  #define MANUAL_Z_HOME_POS 315.8 // For delta: Distance between nozzle and print surface after homing.
+  #define MANUAL_Z_HOME_POS 272 // For delta: Distance between nozzle and print surface after homing.
 #endif
 
 // @section movement
@@ -711,8 +715,9 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 // default settings
 // delta speeds must be the same on xyz
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 80, 760*1.1}  // default steps per unit for Kossel (GT2, 20 tooth)
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 80, 568.9}
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 500, 25}    // (mm/sec)
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 80, 568.9}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {73.157, 73.157, 73.157, 503.45}
+#define DEFAULT_MAX_FEEDRATE          {250, 250, 250, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration in mm/s^2 for printing moves
